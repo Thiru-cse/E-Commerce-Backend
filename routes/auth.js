@@ -13,7 +13,7 @@ router.post("/register", async (req, res) => {
       process.env.PASS_SEC
     ).toString(),
   });
-  
+
   try {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
